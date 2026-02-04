@@ -26,7 +26,7 @@ export function FeaturedProducts() {
               .limit(1)
               .single();
 
-            let imageUrl = '/moon_bag_2.png';
+            let imageUrl = `${import.meta.env.BASE_URL}moon_bag_2.png`;
 
             if (productData) {
               const { data: imageData } = await supabase

@@ -4,21 +4,21 @@ import { Link } from './Link';
 
 const heroSlides = [
   {
-    image: '/saveclip.app_601312496_18088356986284749_7210417344144102615_n.jpg',
+    image: `${import.meta.env.BASE_URL}saveclip.app_601312496_18088356986284749_7210417344144102615_n.jpg`,
     badge: 'HANDCRAFTED LUXURY',
     title: 'Artisan Crochet Bags',
     subtitle: 'Where Traditional Craftsmanship Meets Contemporary Style',
     description: 'Each piece is meticulously handcrafted with premium materials, creating accessories as unique as you are.'
   },
   {
-    image: '/saveclip.app_621406596_18091979729284749_172721588806796614_n.jpg',
+    image: `${import.meta.env.BASE_URL}saveclip.app_621406596_18091979729284749_172721588806796614_n.jpg`,
     badge: 'STATEMENT PIECES',
     title: 'Bold & Beautiful',
     subtitle: 'Express Your Individual Style',
     description: 'Stand out with vibrant colors and unique designs that turn heads and start conversations.'
   },
   {
-    image: '/saveclip.app_622804914_18092175278284749_1495286607420056218_n.jpg',
+    image: `${import.meta.env.BASE_URL}saveclip.app_622804914_18092175278284749_1495286607420056218_n.jpg`,
     badge: 'PREMIUM QUALITY',
     title: 'Made to Last',
     subtitle: 'Durability Meets Design',

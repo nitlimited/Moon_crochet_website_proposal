@@ -23,7 +23,7 @@ export function Header() {
 
           <Link href="/" className="flex items-center group">
             <img
-              src="/moon_crochet_logo-01-01.svg"
+              src={`${import.meta.env.BASE_URL}moon_crochet_logo-01-01.svg`}
               alt="Moon Crochet"
               className="h-14 group-hover:scale-105 transition-transform duration-300"
             />

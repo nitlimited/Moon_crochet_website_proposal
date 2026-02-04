@@ -13,7 +13,7 @@ export function HomePage() {
             <div className="order-1 lg:order-1">
               <div className="relative">
                 <img
-                  src="/moon_bag_3_crochet.png"
+                  src={`${import.meta.env.BASE_URL}moon_bag_3_crochet.png`}
                   alt="Moon Crochet Handmade Bag"
                   className="w-full h-auto"
                 />
@@ -76,14 +76,14 @@ export function HomePage() {
                 <div className="space-y-4">
                   <div className="relative overflow-hidden rounded-3xl shadow-2xl aspect-[3/4]">
                     <img
-                      src="/saveclip.app_601312496_18088356986284749_7210417344144102615_n.jpg"
+                      src={`${import.meta.env.BASE_URL}saveclip.app_601312496_18088356986284749_7210417344144102615_n.jpg`}
                       alt="Handcrafted Pink Crochet Bag"
                       className="w-full h-full object-cover hover:scale-110 transition-transform duration-700"
                     />
                   </div>
                   <div className="relative overflow-hidden rounded-3xl shadow-2xl aspect-square">
                     <img
-                      src="/saveclip.app_615326109_18090960752284749_6238513706493903424_n.jpg"
+                      src={`${import.meta.env.BASE_URL}saveclip.app_615326109_18090960752284749_6238513706493903424_n.jpg`}
                       alt="Brown Fringe Bag Detail"
                       className="w-full h-full object-cover hover:scale-110 transition-transform duration-700"
                     />
@@ -92,14 +92,14 @@ export function HomePage() {
                 <div className="space-y-4 pt-16">
                   <div className="relative overflow-hidden rounded-3xl shadow-2xl aspect-square">
                     <img
-                      src="/saveclip.app_510917458_18069502838284749_4538163862315075870_n.jpg"
+                      src={`${import.meta.env.BASE_URL}saveclip.app_510917458_18069502838284749_4538163862315075870_n.jpg`}
                       alt="Gradient Green Bag"
                       className="w-full h-full object-cover hover:scale-110 transition-transform duration-700"
                     />
                   </div>
                   <div className="relative overflow-hidden rounded-3xl shadow-2xl aspect-[3/4]">
                     <img
-                      src="/saveclip.app_621406596_18091979729284749_172721588806796614_n.jpg"
+                      src={`${import.meta.env.BASE_URL}saveclip.app_621406596_18091979729284749_172721588806796614_n.jpg`}
                       alt="Red Statement Bag"
                       className="w-full h-full object-cover hover:scale-110 transition-transform duration-700"
                     />
@@ -169,7 +169,7 @@ export function HomePage() {
       <section className="py-32 text-white relative overflow-hidden" style={{ backgroundColor: '#273C33' }}>
         <div className="absolute inset-0 opacity-15">
           <img
-            src="/color_pallete.jpg"
+            src={`${import.meta.env.BASE_URL}color_pallete.jpg`}
             alt=""
             className="w-full h-full object-cover"
           />
@@ -299,14 +299,14 @@ export function HomePage() {
               <div className="space-y-4">
                 <div className="relative overflow-hidden rounded-3xl shadow-2xl aspect-[3/4]">
                   <img
-                    src="/saveclip.app_605285730_18089109158284749_7653781410563467721_n.jpg"
+                    src={`${import.meta.env.BASE_URL}saveclip.app_605285730_18089109158284749_7653781410563467721_n.jpg`}
                     alt="Brown Crochet Bag Detail"
                     className="w-full h-full object-cover hover:scale-110 transition-transform duration-700"
                   />
                 </div>
                 <div className="relative overflow-hidden rounded-3xl shadow-2xl aspect-square">
                   <img
-                    src="/saveclip.app_622804914_18092175278284749_1495286607420056218_n.jpg"
+                    src={`${import.meta.env.BASE_URL}saveclip.app_622804914_18092175278284749_1495286607420056218_n.jpg`}
                     alt="Bag Detail Showcase"
                     className="w-full h-full object-cover hover:scale-110 transition-transform duration-700"
                   />
@@ -315,14 +315,14 @@ export function HomePage() {
               <div className="space-y-4 pt-16">
                 <div className="relative overflow-hidden rounded-3xl shadow-2xl aspect-square">
                   <img
-                    src="/saveclip.app_601312496_18088356986284749_7210417344144102615_n.jpg"
+                    src={`${import.meta.env.BASE_URL}saveclip.app_601312496_18088356986284749_7210417344144102615_n.jpg`}
                     alt="Pink Crochet Bag"
                     className="w-full h-full object-cover hover:scale-110 transition-transform duration-700"
                   />
                 </div>
                 <div className="relative overflow-hidden rounded-3xl shadow-2xl aspect-[3/4]">
                   <img
-                    src="/saveclip.app_615326109_18090960752284749_6238513706493903424_n.jpg"
+                    src={`${import.meta.env.BASE_URL}saveclip.app_615326109_18090960752284749_6238513706493903424_n.jpg`}
                     alt="Craftsmanship Detail"
                     className="w-full h-full object-cover hover:scale-110 transition-transform duration-700"
                   />

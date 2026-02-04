@@ -58,7 +58,7 @@ export function CustomOrdersPage() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12 max-w-6xl mx-auto">
           <div className="relative overflow-hidden rounded-2xl group">
             <img
-              src="/saveclip.app_491439312_18063237902284749_8207353838394312841_n.jpg"
+              src={`${import.meta.env.BASE_URL}saveclip.app_491439312_18063237902284749_8207353838394312841_n.jpg`}
               alt="Beautiful crochet bags"
               className="w-full h-[300px] object-cover transform group-hover:scale-105 transition-transform duration-500"
             />
@@ -70,7 +70,7 @@ export function CustomOrdersPage() {
           </div>
           <div className="relative overflow-hidden rounded-2xl group">
             <img
-              src="/saveclip.app_491443100_18063237890284749_4887961127801087615_n.jpg"
+              src={`${import.meta.env.BASE_URL}saveclip.app_491443100_18063237890284749_4887961127801087615_n.jpg`}
               alt="Quality materials"
               className="w-full h-[300px] object-cover transform group-hover:scale-105 transition-transform duration-500"
             />
@@ -89,7 +89,7 @@ export function CustomOrdersPage() {
           </div>
           <div className="relative overflow-hidden rounded-xl">
             <img
-              src="/color_pallete.jpg"
+              src={`${import.meta.env.BASE_URL}color_pallete.jpg`}
               alt="Rainbow of yarn colors"
               className="w-full h-[350px] object-cover"
             />

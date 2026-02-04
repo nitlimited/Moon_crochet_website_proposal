@@ -4,7 +4,7 @@ export function AboutPage() {
       {/* Hero Section */}
       <div className="relative h-[70vh] overflow-hidden">
         <img
-          src="/saveclip.app_573133521_18084027116284749_4838689241047013363_n.jpg"
+          src={`${import.meta.env.BASE_URL}saveclip.app_573133521_18084027116284749_4838689241047013363_n.jpg`}
           alt="About Moon Crochet"
           className="w-full h-full object-cover"
         />
@@ -54,7 +54,7 @@ export function AboutPage() {
             <div className="order-1 md:order-2">
               <div className="relative aspect-[3/4] overflow-hidden rounded-lg shadow-2xl">
                 <img
-                  src="/saveclip.app_518188967_18071242190284749_4858771051938695875_n.jpg"
+                  src={`${import.meta.env.BASE_URL}saveclip.app_518188967_18071242190284749_4858771051938695875_n.jpg`}
                   alt="Jane Ama Fosuwah"
                   className="w-full h-full object-cover"
                 />
@@ -70,7 +70,7 @@ export function AboutPage() {
           <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
             <div className="relative aspect-[4/3] overflow-hidden rounded-lg shadow-xl">
               <img
-                src="/saveclip.app_526528248_18073449989284749_2336818491889026781_n_(1).jpg"
+                src={`${import.meta.env.BASE_URL}saveclip.app_526528248_18073449989284749_2336818491889026781_n_(1).jpg`}
                 alt="Our Vision"
                 className="w-full h-full object-cover"
               />
@@ -113,7 +113,7 @@ export function AboutPage() {
             </div>
             <div className="relative aspect-[4/3] overflow-hidden rounded-lg shadow-xl">
               <img
-                src="/color_pallete.jpg"
+                src={`${import.meta.env.BASE_URL}color_pallete.jpg`}
                 alt="The Craft"
                 className="w-full h-full object-cover"
               />
@@ -136,7 +136,7 @@ export function AboutPage() {
               <div className="group">
                 <div className="relative aspect-square overflow-hidden rounded-lg mb-6 shadow-lg">
                   <img
-                    src="/saveclip.app_510917458_18069502838284749_4538163862315075870_n.jpg"
+                    src={`${import.meta.env.BASE_URL}saveclip.app_510917458_18069502838284749_4538163862315075870_n.jpg`}
                     alt="Handcrafted"
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                   />
@@ -152,7 +152,7 @@ export function AboutPage() {
               <div className="group">
                 <div className="relative aspect-square overflow-hidden rounded-lg mb-6 shadow-lg">
                   <img
-                    src="/saveclip.app_621406596_18091979729284749_172721588806796614_n.jpg"
+                    src={`${import.meta.env.BASE_URL}saveclip.app_621406596_18091979729284749_172721588806796614_n.jpg`}
                     alt="Sustainable"
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                   />
@@ -168,7 +168,7 @@ export function AboutPage() {
               <div className="group">
                 <div className="relative aspect-square overflow-hidden rounded-lg mb-6 shadow-lg">
                   <img
-                    src="/saveclip.app_605285730_18089109158284749_7653781410563467721_n.jpg"
+                    src={`${import.meta.env.BASE_URL}saveclip.app_605285730_18089109158284749_7653781410563467721_n.jpg`}
                     alt="Timeless"
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                   />

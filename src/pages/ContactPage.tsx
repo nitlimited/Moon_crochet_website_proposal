@@ -41,7 +41,7 @@ export function ContactPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             <div className="relative overflow-hidden rounded-lg">
               <img
-                src="/saveclip.app_619895719_18091710743284749_4850870245939109280_n.jpg"
+                src={`${import.meta.env.BASE_URL}saveclip.app_619895719_18091710743284749_4850870245939109280_n.jpg`}
                 alt="Contact Moon Crochet"
                 className="w-full h-full object-cover min-h-[500px]"
               />

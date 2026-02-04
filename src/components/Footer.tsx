@@ -27,7 +27,7 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
           <div>
             <img
-              src="/moon_crochet_logo-01-01.svg"
+              src={`${import.meta.env.BASE_URL}moon_crochet_logo-01-01.svg`}
               alt="Moon Crochet"
               className="h-14 mb-4"
               style={{ filter: 'invert(23%) sepia(8%) saturate(1806%) hue-rotate(113deg) brightness(95%) contrast(92%)' }}

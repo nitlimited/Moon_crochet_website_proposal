@@ -10,6 +10,13 @@ export function FeaturedProducts() {
 
   useEffect(() => {
     async function fetchFeaturedCategories() {
+      const categoryImages: Record<string, string> = {
+        'clutch-bag': `${import.meta.env.BASE_URL}clutch_bag.jpg`,
+        'shell-bags': `${import.meta.env.BASE_URL}shell_bags.jpg`,
+        'fringe-bag': `${import.meta.env.BASE_URL}fringe_bag.jpg`,
+        'noodle-bag': `${import.meta.env.BASE_URL}noodle_bag.jpg`,
+      };
+
       const { data: categoriesData } = await supabase
         .from('categories')
         .select('*')
@@ -17,33 +24,10 @@ export function FeaturedProducts() {
         .order('created_at', { ascending: true });
 
       if (categoriesData) {
-        const categoriesWithImages = await Promise.all(
-          categoriesData.map(async (category) => {
-            const { data: productData } = await supabase
-              .from('products')
-              .select('id')
-              .eq('category_id', category.id)
-              .limit(1)
-              .single();
-
-            let imageUrl = `${import.meta.env.BASE_URL}moon_bag_2.png`;
-
-            if (productData) {
-              const { data: imageData } = await supabase
-                .from('product_images')
-                .select('image_url')
-                .eq('product_id', productData.id)
-                .eq('is_primary', true)
-                .maybeSingle();
-
-              if (imageData) {
-                imageUrl = imageData.image_url;
-              }
-            }
-
-            return { ...category, imageUrl };
-          })
-        );
+        const categoriesWithImages = categoriesData.map((category) => ({
+          ...category,
+          imageUrl: categoryImages[category.slug] || `${import.meta.env.BASE_URL}moon_bag_2.png`,
+        }));
 
         setCategories(categoriesWithImages);
       }

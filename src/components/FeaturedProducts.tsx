@@ -66,7 +66,7 @@ export function FeaturedProducts() {
           onClick={(e) => {
             e.preventDefault();
             window.history.pushState({}, '', getFullPath('/shop'));
-            window.dispatchEvent(new PopStateEvent('popstate'));
+            window.dispatchEvent(new Event('popstate'));
           }}
           className="group inline-flex items-center gap-3 px-12 py-5 text-white rounded-full hover:opacity-90 transition-all font-bold text-lg transform hover:scale-105 shadow-2xl"
           style={{ backgroundColor: '#273C33' }}
@@ -79,7 +79,7 @@ export function FeaturedProducts() {
           onClick={(e) => {
             e.preventDefault();
             window.history.pushState({}, '', getFullPath('/custom-orders'));
-            window.dispatchEvent(new PopStateEvent('popstate'));
+            window.dispatchEvent(new Event('popstate'));
           }}
           className="group inline-flex items-center gap-3 px-12 py-5 bg-white border-2 rounded-full hover:text-white transition-all font-bold text-lg transform hover:scale-105 shadow-xl"
           style={{ borderColor: '#273C33', color: '#273C33' }}

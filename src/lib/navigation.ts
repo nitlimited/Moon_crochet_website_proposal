@@ -9,5 +9,5 @@ export function getFullPath(path: string): string {
 export function navigate(path: string): void {
   const fullPath = getFullPath(path);
   window.history.pushState({}, '', fullPath);
-  window.dispatchEvent(new PopStateEvent('popstate'));
+  window.dispatchEvent(new Event('popstate'));
 }

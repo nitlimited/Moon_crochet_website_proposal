@@ -67,7 +67,7 @@ export function ProductDetailPage({ slug }: { slug: string }) {
             onClick={(e) => {
               e.preventDefault();
               window.history.pushState({}, '', getFullPath('/shop'));
-              window.dispatchEvent(new PopStateEvent('popstate'));
+              window.dispatchEvent(new Event('popstate'));
             }}
             className="text-neutral-600 hover:text-neutral-900"
           >
@@ -223,7 +223,7 @@ export function ProductDetailPage({ slug }: { slug: string }) {
                     onClick={(e) => {
                       e.preventDefault();
                       window.history.pushState({}, '', getFullPath(`/product/${relatedProduct.slug}`));
-                      window.dispatchEvent(new PopStateEvent('popstate'));
+                      window.dispatchEvent(new Event('popstate'));
                     }}
                     className="group"
                   >

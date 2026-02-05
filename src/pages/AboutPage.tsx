@@ -204,7 +204,7 @@ export function AboutPage() {
                 onClick={(e) => {
                   e.preventDefault();
                   window.history.pushState({}, '', getFullPath('/shop'));
-                  window.dispatchEvent(new PopStateEvent('popstate'));
+                  window.dispatchEvent(new Event('popstate'));
                 }}
                 className="px-8 py-4 bg-neutral-900 text-white rounded-full hover:bg-neutral-800 transition-colors text-lg font-medium"
               >
@@ -215,7 +215,7 @@ export function AboutPage() {
                 onClick={(e) => {
                   e.preventDefault();
                   window.history.pushState({}, '', getFullPath('/custom-orders'));
-                  window.dispatchEvent(new PopStateEvent('popstate'));
+                  window.dispatchEvent(new Event('popstate'));
                 }}
                 className="px-8 py-4 bg-white border-2 border-neutral-900 text-neutral-900 rounded-full hover:bg-neutral-50 transition-colors text-lg font-medium"
               >

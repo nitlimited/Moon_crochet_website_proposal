@@ -17,7 +17,7 @@ export function CategoryCard({ category, imageUrl }: CategoryCardProps) {
       onClick={(e) => {
         e.preventDefault();
         window.history.pushState({}, '', fullPath);
-        window.dispatchEvent(new PopStateEvent('popstate'));
+        window.dispatchEvent(new Event('popstate'));
       }}
       className="group block relative overflow-hidden rounded-3xl shadow-2xl hover:shadow-3xl transition-all duration-700"
     >

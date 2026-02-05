@@ -14,9 +14,15 @@ const BASE_PATH = import.meta.env.BASE_URL;
 function App() {
   const getPathWithoutBase = (pathname: string) => {
     if (BASE_PATH === '/') return pathname;
-    return pathname.startsWith(BASE_PATH)
-      ? pathname.slice(BASE_PATH.length - 1)
-      : pathname;
+
+    const normalizedBase = BASE_PATH.endsWith('/') ? BASE_PATH.slice(0, -1) : BASE_PATH;
+
+    if (pathname.startsWith(normalizedBase)) {
+      const stripped = pathname.slice(normalizedBase.length);
+      return stripped || '/';
+    }
+
+    return pathname;
   };
 
   const [currentPath, setCurrentPath] = useState(getPathWithoutBase(window.location.pathname));

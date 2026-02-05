@@ -13,7 +13,7 @@ export function Link({ href, children, className = '' }: LinkProps) {
   const handleClick = (e: React.MouseEvent) => {
     e.preventDefault();
     window.history.pushState({}, '', fullHref);
-    window.dispatchEvent(new PopStateEvent('popstate'));
+    window.dispatchEvent(new Event('popstate'));
   };
 
   return (

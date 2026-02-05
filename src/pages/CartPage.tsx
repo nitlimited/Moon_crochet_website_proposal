@@ -16,7 +16,7 @@ export function CartPage() {
             onClick={(e) => {
               e.preventDefault();
               window.history.pushState({}, '', getFullPath('/shop'));
-              window.dispatchEvent(new PopStateEvent('popstate'));
+              window.dispatchEvent(new Event('popstate'));
             }}
             className="px-8 py-3 bg-neutral-900 text-white rounded-lg hover:bg-neutral-800 transition-colors inline-block"
           >
@@ -94,11 +94,11 @@ export function CartPage() {
                   Proceed to Checkout
                 </button>
                 <a
-                  href="/shop"
+                  href={getFullPath('/shop')}
                   onClick={(e) => {
                     e.preventDefault();
-                    window.history.pushState({}, '', '/shop');
-                    window.dispatchEvent(new PopStateEvent('popstate'));
+                    window.history.pushState({}, '', getFullPath('/shop'));
+                    window.dispatchEvent(new Event('popstate'));
                   }}
                   className="block text-center text-neutral-600 hover:text-neutral-900"
                 >

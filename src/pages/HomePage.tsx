@@ -407,7 +407,7 @@ export function HomePage() {
                 onClick={(e) => {
                   e.preventDefault();
                   window.history.pushState({}, '', getFullPath('/shop'));
-                  window.dispatchEvent(new PopStateEvent('popstate'));
+                  window.dispatchEvent(new Event('popstate'));
                 }}
                 className="px-12 py-6 bg-white text-amber-900 rounded-full hover:bg-amber-50 transition-all font-bold text-xl shadow-2xl hover:shadow-3xl transform hover:scale-105"
               >
@@ -418,7 +418,7 @@ export function HomePage() {
                 onClick={(e) => {
                   e.preventDefault();
                   window.history.pushState({}, '', getFullPath('/custom-orders'));
-                  window.dispatchEvent(new PopStateEvent('popstate'));
+                  window.dispatchEvent(new Event('popstate'));
                 }}
                 className="px-12 py-6 border-2 border-white text-white rounded-full hover:bg-white hover:text-amber-900 transition-all font-bold text-xl backdrop-blur-sm transform hover:scale-105"
               >

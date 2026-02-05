@@ -1,5 +1,6 @@
 import { Hero } from '../components/Hero';
 import { FeaturedProducts } from '../components/FeaturedProducts';
+import { getFullPath } from '../lib/navigation';
 import { Instagram, Heart, Shield, Sparkles, Package, Palette, Scissors, Star, Award, Clock, Truck, MessageCircle } from 'lucide-react';
 
 export function HomePage() {
@@ -402,10 +403,10 @@ export function HomePage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
               <a
-                href="/shop"
+                href={getFullPath('/shop')}
                 onClick={(e) => {
                   e.preventDefault();
-                  window.history.pushState({}, '', '/shop');
+                  window.history.pushState({}, '', getFullPath('/shop'));
                   window.dispatchEvent(new PopStateEvent('popstate'));
                 }}
                 className="px-12 py-6 bg-white text-amber-900 rounded-full hover:bg-amber-50 transition-all font-bold text-xl shadow-2xl hover:shadow-3xl transform hover:scale-105"
@@ -413,10 +414,10 @@ export function HomePage() {
                 Shop Collection
               </a>
               <a
-                href="/custom-orders"
+                href={getFullPath('/custom-orders')}
                 onClick={(e) => {
                   e.preventDefault();
-                  window.history.pushState({}, '', '/custom-orders');
+                  window.history.pushState({}, '', getFullPath('/custom-orders'));
                   window.dispatchEvent(new PopStateEvent('popstate'));
                 }}
                 className="px-12 py-6 border-2 border-white text-white rounded-full hover:bg-white hover:text-amber-900 transition-all font-bold text-xl backdrop-blur-sm transform hover:scale-105"

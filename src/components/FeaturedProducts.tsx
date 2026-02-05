@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Category, supabase } from '../lib/supabase';
 import { CategoryCard } from './CategoryCard';
+import { getFullPath } from '../lib/navigation';
 
 type CategoryWithImage = Category & { imageUrl: string };
 
@@ -61,10 +62,10 @@ export function FeaturedProducts() {
 
       <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mt-20">
         <a
-          href="/shop"
+          href={getFullPath('/shop')}
           onClick={(e) => {
             e.preventDefault();
-            window.history.pushState({}, '', '/shop');
+            window.history.pushState({}, '', getFullPath('/shop'));
             window.dispatchEvent(new PopStateEvent('popstate'));
           }}
           className="group inline-flex items-center gap-3 px-12 py-5 text-white rounded-full hover:opacity-90 transition-all font-bold text-lg transform hover:scale-105 shadow-2xl"
@@ -74,10 +75,10 @@ export function FeaturedProducts() {
           <span className="group-hover:translate-x-1 transition-transform duration-300">→</span>
         </a>
         <a
-          href="/custom-orders"
+          href={getFullPath('/custom-orders')}
           onClick={(e) => {
             e.preventDefault();
-            window.history.pushState({}, '', '/custom-orders');
+            window.history.pushState({}, '', getFullPath('/custom-orders'));
             window.dispatchEvent(new PopStateEvent('popstate'));
           }}
           className="group inline-flex items-center gap-3 px-12 py-5 bg-white border-2 rounded-full hover:text-white transition-all font-bold text-lg transform hover:scale-105 shadow-xl"

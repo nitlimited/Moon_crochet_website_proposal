@@ -1,3 +1,5 @@
+import { getFullPath } from '../lib/navigation';
+
 export function AboutPage() {
   return (
     <div className="min-h-screen bg-white">
@@ -198,10 +200,10 @@ export function AboutPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="/shop"
+                href={getFullPath('/shop')}
                 onClick={(e) => {
                   e.preventDefault();
-                  window.history.pushState({}, '', '/shop');
+                  window.history.pushState({}, '', getFullPath('/shop'));
                   window.dispatchEvent(new PopStateEvent('popstate'));
                 }}
                 className="px-8 py-4 bg-neutral-900 text-white rounded-full hover:bg-neutral-800 transition-colors text-lg font-medium"
@@ -209,10 +211,10 @@ export function AboutPage() {
                 Browse Collection
               </a>
               <a
-                href="/custom-orders"
+                href={getFullPath('/custom-orders')}
                 onClick={(e) => {
                   e.preventDefault();
-                  window.history.pushState({}, '', '/custom-orders');
+                  window.history.pushState({}, '', getFullPath('/custom-orders'));
                   window.dispatchEvent(new PopStateEvent('popstate'));
                 }}
                 className="px-8 py-4 bg-white border-2 border-neutral-900 text-neutral-900 rounded-full hover:bg-neutral-50 transition-colors text-lg font-medium"

@@ -1,4 +1,5 @@
 import { Category } from '../lib/supabase';
+import { getFullPath } from '../lib/navigation';
 import { ArrowRight } from 'lucide-react';
 
 interface CategoryCardProps {
@@ -7,12 +8,15 @@ interface CategoryCardProps {
 }
 
 export function CategoryCard({ category, imageUrl }: CategoryCardProps) {
+  const path = `/shop?category=${category.slug}`;
+  const fullPath = getFullPath(path);
+
   return (
     <a
-      href={`/shop?category=${category.slug}`}
+      href={fullPath}
       onClick={(e) => {
         e.preventDefault();
-        window.history.pushState({}, '', `/shop?category=${category.slug}`);
+        window.history.pushState({}, '', fullPath);
         window.dispatchEvent(new PopStateEvent('popstate'));
       }}
       className="group block relative overflow-hidden rounded-3xl shadow-2xl hover:shadow-3xl transition-all duration-700"

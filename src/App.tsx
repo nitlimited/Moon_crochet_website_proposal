@@ -9,12 +9,21 @@ import { CustomOrdersPage } from './pages/CustomOrdersPage';
 import { ContactPage } from './pages/ContactPage';
 import { CartPage } from './pages/CartPage';
 
+const BASE_PATH = import.meta.env.BASE_URL;
+
 function App() {
-  const [currentPath, setCurrentPath] = useState(window.location.pathname);
+  const getPathWithoutBase = (pathname: string) => {
+    if (BASE_PATH === '/') return pathname;
+    return pathname.startsWith(BASE_PATH)
+      ? pathname.slice(BASE_PATH.length - 1)
+      : pathname;
+  };
+
+  const [currentPath, setCurrentPath] = useState(getPathWithoutBase(window.location.pathname));
 
   useEffect(() => {
     const handlePopState = () => {
-      setCurrentPath(window.location.pathname);
+      setCurrentPath(getPathWithoutBase(window.location.pathname));
     };
 
     window.addEventListener('popstate', handlePopState);
@@ -22,7 +31,7 @@ function App() {
   }, []);
 
   const renderPage = () => {
-    if (currentPath === '/') return <HomePage />;
+    if (currentPath === '/' || currentPath === '') return <HomePage />;
     if (currentPath === '/shop') return <ShopPage />;
     if (currentPath === '/about') return <AboutPage />;
     if (currentPath === '/custom-orders') return <CustomOrdersPage />;

@@ -1,4 +1,5 @@
 import { Trash2 } from 'lucide-react';
+import { getFullPath } from '../lib/navigation';
 
 export function CartPage() {
   const cartEmpty = true;
@@ -11,10 +12,10 @@ export function CartPage() {
           <h1 className="font-serif text-3xl mb-4">Your Cart is Empty</h1>
           <p className="text-neutral-600 mb-8">Start adding some beautiful handcrafted pieces!</p>
           <a
-            href="/shop"
+            href={getFullPath('/shop')}
             onClick={(e) => {
               e.preventDefault();
-              window.history.pushState({}, '', '/shop');
+              window.history.pushState({}, '', getFullPath('/shop'));
               window.dispatchEvent(new PopStateEvent('popstate'));
             }}
             className="px-8 py-3 bg-neutral-900 text-white rounded-lg hover:bg-neutral-800 transition-colors inline-block"

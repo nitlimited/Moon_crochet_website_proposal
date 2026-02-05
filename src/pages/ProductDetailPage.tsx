@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Product, Review, supabase } from '../lib/supabase';
+import { getFullPath } from '../lib/navigation';
 import { ShoppingCart, Star, Heart, Share2 } from 'lucide-react';
 
 const placeholderImages = [
@@ -62,10 +63,10 @@ export function ProductDetailPage({ slug }: { slug: string }) {
         <div className="text-center">
           <h1 className="text-2xl font-serif mb-4">Product Not Found</h1>
           <a
-            href="/shop"
+            href={getFullPath('/shop')}
             onClick={(e) => {
               e.preventDefault();
-              window.history.pushState({}, '', '/shop');
+              window.history.pushState({}, '', getFullPath('/shop'));
               window.dispatchEvent(new PopStateEvent('popstate'));
             }}
             className="text-neutral-600 hover:text-neutral-900"
@@ -218,10 +219,10 @@ export function ProductDetailPage({ slug }: { slug: string }) {
                 return (
                   <a
                     key={relatedProduct.id}
-                    href={`/product/${relatedProduct.slug}`}
+                    href={getFullPath(`/product/${relatedProduct.slug}`)}
                     onClick={(e) => {
                       e.preventDefault();
-                      window.history.pushState({}, '', `/product/${relatedProduct.slug}`);
+                      window.history.pushState({}, '', getFullPath(`/product/${relatedProduct.slug}`));
                       window.dispatchEvent(new PopStateEvent('popstate'));
                     }}
                     className="group"
